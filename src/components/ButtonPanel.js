@@ -33,7 +33,7 @@ export default function ButtonPanel() {
       </div>
 
       <div id="group5">
-        <Button name="0" wide={true} color="#dfdfdf" />
+        <Button name="0" wide color="#dfdfdf" />
         <Button name="." color="#dfdfdf" />
         <Button name="=" />
       </div>

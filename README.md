@@ -1,18 +1,18 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Calculator App
 
-> One paragraph statement about the project.
+> Calculator App built with React.js
 
 ![screenshot](./app_screenshot.png)
 
-Additional description about the project and its features.
+Calculator App buit using Rect.js
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML, CSS
+- React.js
+- ES6 JavaScript
 
 ## Live Demo
 
@@ -20,52 +20,41 @@ Additional description about the project and its features.
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+To get a local copy up and running follow these simple example steps.
+
+## Installation
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+Have a browser installed
+
 ### Setup
 
-### Install
+Clone this repo with <code>git@github.com:Azeem838/calculator-app.git</code>
 
-### Usage
+### Usage - Follow these
 
-### Run tests
+1. <code>cd</code> into the project directory
+2. run <code>npm install</code>
+3. Navigate to [localhost:8000](http://localhost:8000) in your browser.
+4. Enjoy :smiley:
 
-### Deployment
+:bust_in_silhouette: **Azeem Ahmed**
 
-## Authors
-
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
+- Github: [@Azeem838](https://github.com/Azeem838)
+- LinkedIn: [Azeem Ahmed](www.linkedin.com/in/azeemmahmed)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/Azeem838/calculator-app/issues).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
 
 ## 📝 License
 

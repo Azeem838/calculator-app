@@ -1,78 +1,41 @@
 import React from 'react';
+import Button from './Button';
 
 export default function ButtonPanel() {
   return (
     <div id="buttons">
       <div id="group1">
-        <button type="button" id="ac">
-          AC
-        </button>
-        <button type="button" id="change-sign">
-          +/-
-        </button>
-        <button type="button" id="percent">
-          %
-        </button>
-        <button type="button" id="divide">
-          ÷
-        </button>
+        <Button name="AC" />
+        <Button name="+/-" />
+        <Button name="%" />
+        <Button name="÷" />
       </div>
 
       <div id="group2">
-        <button type="button" id="seven">
-          7
-        </button>
-        <button type="button" id="eight">
-          8
-        </button>
-        <button type="button" id="nine">
-          9
-        </button>
-        <button type="button" id="multiply">
-          X
-        </button>
+        <Button name="7" />
+        <Button name="8" />
+        <Button name="9" />
+        <Button name="X" />
       </div>
 
       <div id="group3">
-        <button type="button" id="four">
-          4
-        </button>
-        <button type="button" id="five">
-          5
-        </button>
-        <button type="button" id="six">
-          6
-        </button>
-        <button type="button" id="subtract">
-          -
-        </button>
+        <Button name="4" />
+        <Button name="5" />
+        <Button name="6" />
+        <Button name="-" />
       </div>
 
       <div id="group4">
-        <button type="button" id="one">
-          1
-        </button>
-        <button type="button" id="two">
-          2
-        </button>
-        <button type="button" id="three">
-          3
-        </button>
-        <button type="button" id="add">
-          +
-        </button>
+        <Button name="1" />
+        <Button name="2" />
+        <Button name="3" />
+        <Button name="+" />
       </div>
 
       <div id="group5">
-        <button type="button" id="zero">
-          0
-        </button>
-        <button type="button" id="decimal">
-          .
-        </button>
-        <button type="button" id="equal">
-          equal
-        </button>
+        <Button name="0" />
+        <Button name="." />
+        <Button name="=" />
       </div>
     </div>
   );

@@ -1,11 +1,11 @@
 import React from 'react';
 import ButtonPanel from './ButtonPanel';
-import Button from './Button';
+import Display from './Display';
 
 export default function App() {
   return (
     <div id="buttonLayout">
-      <Button />
+      <Display />
       <ButtonPanel />
     </div>
   );

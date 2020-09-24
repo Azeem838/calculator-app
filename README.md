@@ -2,7 +2,7 @@
 
 # Calculator App
 
-> Calculator App built with React.js
+> Calculator App built with React.js.
 
 ![screenshot](./app_screenshot.png)
 

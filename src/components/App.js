@@ -17,13 +17,16 @@ export default class App extends React.Component {
   }
 
   handleClick(buttonName) {
-    this.setState((prevState) => {
-      const data = calculate(prevState, buttonName);
-      return {
-        total: data.total,
-        next: data.next,
-        operation: data.operation,
-      };
+    // this.setState((prevState) => {
+    //   const data = calculate(prevState, buttonName);
+    //   return {
+    //     total: data.total,
+    //     next: data.next,
+    //     operation: data.operation,
+    //   };
+    // });
+    this.setState({
+      total: buttonName,
     });
   }
 
@@ -32,7 +35,9 @@ export default class App extends React.Component {
     return (
       <div id="calculator">
         <Display result={total} />
-        <ButtonPanel onClick={this.handleClick} />
+        <ButtonPanel
+          clickHandler={(buttonName) => this.handleClick(buttonName)}
+        />
       </div>
     );
   }

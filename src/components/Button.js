@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Button({ name, color, wide, clickHandler }) {
+export default function Button({
+  name, color, wide, clickHandler,
+}) {
   return (
     <button
       style={{ backgroundColor: color, width: wide ? '50%' : '25%' }}

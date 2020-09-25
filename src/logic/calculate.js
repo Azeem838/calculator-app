@@ -25,10 +25,10 @@ export default function calculate(dataObj, btnName) {
       operation,
     };
   } else if (
-    total
-    && next
-    && btnName === '%'
-    && (operation === '+' || operation === '-')
+    total &&
+    next &&
+    btnName === '%' &&
+    (operation === '+' || operation === '-')
   ) {
     const percentOfTotal = total * (next * 0.01);
     data = {
@@ -37,10 +37,10 @@ export default function calculate(dataObj, btnName) {
       operation: null,
     };
   } else if (
-    total
-    && next
-    && btnName === '%'
-    && (operation === 'X' || operation === '÷')
+    total &&
+    next &&
+    btnName === '%' &&
+    (operation === 'X' || operation === '÷')
   ) {
     const percent = next * 0.01;
     data = {
@@ -92,11 +92,16 @@ export default function calculate(dataObj, btnName) {
       next: next + btnName,
       operation,
     };
-  } else if (total && operation && next && btnName === '=') {
+  } else if (
+    total &&
+    operation &&
+    next &&
+    (btnName === '=' || operators.includes(btnName))
+  ) {
     data = {
       total: operate(total, next, operation),
       next: null,
-      operation: null,
+      operation: operators.includes(btnName) ? btnName : null,
     };
   }
 

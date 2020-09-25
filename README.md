@@ -1,12 +1,17 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+<p align="center">
+  <a>
+    <p align="center"> <img src="./app_screenshot.png" alt="calculator-app"> </p>
+  </a>
 
-# Calculator App
+  <h2 align="center">Calculator App</h2>
+  <h3 align="center">Built with React</h3>
 
-> Calculator App built with React.js.
-
-![screenshot](./app_screenshot.png)
-
-Calculator App buit using Rect.js
+  <p align="center">
+    <a href="https://github.com/Azeem838/calculator-app/issues">Report Bug</a>
+    · 
+    <a href="https://github.com/Azeem838/calculator-app/issues">Request Feature</a>
+  </p>
+</p>
 
 ## Built With
 

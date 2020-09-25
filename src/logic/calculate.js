@@ -48,6 +48,12 @@ export default function calculate(dataObj, btnName) {
       next: null,
       operation: null,
     };
+  } else if (total && !next && btnName === '%') {
+    data = {
+      total: (total / 100).toString(),
+      next: null,
+      operation: null,
+    };
   } else if (total && !next && btnName === '.') {
     data = {
       total: `${total}.`,

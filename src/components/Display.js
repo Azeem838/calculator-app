@@ -1,15 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Display = ({ total, next, operation }) => {
-  return (
-    <div>
-      <div id="result">
-        {total} {operation} {next}
-      </div>
+const Display = ({ total, next, operation }) => (
+  <div>
+    <div id="result">
+      {total}
+      {' '}
+      {operation}
+      {' '}
+      {next}
     </div>
-  );
-};
+  </div>
+);
 
 Display.propTypes = {
   total: PropTypes.string,

@@ -21,7 +21,11 @@ export default class App extends React.Component {
   }
 
   render() {
-    const { total, next, operation } = this.state;
+    const { next, operation } = this.state;
+    let { total } = this.state;
+    if (total === null) {
+      total = '0';
+    }
     return (
       <div id="calculator">
         <Display total={total} next={next} operation={operation} />

@@ -98,19 +98,20 @@ export default function calculate(dataObj, btnName) {
       next: next + btnName,
       operation,
     };
-  } else if (
-    total &&
-    operation &&
-    next &&
-    (btnName === '=' || operators.includes(btnName))
-  ) {
+  } else if (total && operation && next && operators.includes(btnName)) {
     data = {
       total:
         operate(total, next, operation) === 'NaN'
           ? null
           : operate(total, next, operation),
-      next: total === 'NaN' ? next : null,
-      operation: operators.includes(btnName) ? btnName : null,
+      next: null,
+      operation: btnName,
+    };
+  } else if (total && operation && next && btnName === '=') {
+    data = {
+      total: operate(total, next, operation),
+      next: null,
+      operation: 'AC',
     };
   }
 

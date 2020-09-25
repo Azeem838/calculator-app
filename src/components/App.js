@@ -17,15 +17,14 @@ export default class App extends React.Component {
   }
 
   handleClick(buttonName) {
-    this.setState(prevState => calculate(prevState, buttonName));
+    this.setState((prevState) => calculate(prevState, buttonName));
   }
 
   render() {
     const { total, next, operation } = this.state;
-    const result = next || total || operation || '0';
     return (
       <div id="calculator">
-        <Display result={result} />
+        <Display total={total} next={next} operation={operation} />
         <ButtonPanel clickHandler={this.handleClick} />
       </div>
     );

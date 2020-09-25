@@ -4,7 +4,11 @@ import PropTypes from 'prop-types';
 const Display = ({ total, next, operation }) => (
   <div>
     <div id="result">
-      {total} {operation} {next}
+      {total}
+      {' '}
+      {operation}
+      {' '}
+      {next}
     </div>
   </div>
 );

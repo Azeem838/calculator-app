@@ -25,10 +25,10 @@ export default function calculate(dataObj, btnName) {
       operation,
     };
   } else if (
-    total
-    && next
-    && btnName === '%'
-    && (operation === '+' || operation === '-')
+    total &&
+    next &&
+    btnName === '%' &&
+    (operation === '+' || operation === '-')
   ) {
     const percentOfTotal = total * (next * 0.01);
     data = {
@@ -37,10 +37,10 @@ export default function calculate(dataObj, btnName) {
       operation: null,
     };
   } else if (
-    total
-    && next
-    && btnName === '%'
-    && (operation === 'X' || operation === '÷')
+    total &&
+    next &&
+    btnName === '%' &&
+    (operation === 'X' || operation === '÷')
   ) {
     const percent = next * 0.01;
     data = {
@@ -98,22 +98,20 @@ export default function calculate(dataObj, btnName) {
       next: next + btnName,
       operation,
     };
-  } else if (total && operation && next && operators.includes(btnName)) {
+  } else if (
+    total &&
+    operation &&
+    next &&
+    (operators.includes(btnName) || btnName === '=')
+  ) {
     data = {
       total:
         operate(total, next, operation) === 'NaN'
           ? null
           : operate(total, next, operation),
       next: null,
-      operation: btnName,
-    };
-  } else if (total && operation && next && btnName === '=') {
-    data = {
-      total: operate(total, next, operation),
-      next: null,
-      operation: '=',
+      operation: btnName === '=' ? null : btnName,
     };
   }
-
   return data;
 }

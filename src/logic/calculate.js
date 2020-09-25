@@ -111,7 +111,7 @@ export default function calculate(dataObj, btnName) {
     data = {
       total: operate(total, next, operation),
       next: null,
-      operation: 'AC',
+      operation: '=',
     };
   }
 

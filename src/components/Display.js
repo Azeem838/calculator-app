@@ -5,7 +5,7 @@ const Display = ({ total, next, operation }) => {
   return (
     <div>
       <div id="result">
-        {total} {operation} {next}
+        {total} {operation === '=' ? '' : operation} {next}
       </div>
     </div>
   );

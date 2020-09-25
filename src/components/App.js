@@ -17,7 +17,7 @@ export default class App extends React.Component {
   }
 
   handleClick(buttonName) {
-    this.setState((prevState) => {
+    this.setState(prevState => {
       if (prevState.operation === '=') {
         return {
           total: null,

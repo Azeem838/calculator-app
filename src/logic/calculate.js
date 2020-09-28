@@ -25,10 +25,10 @@ export default function calculate(dataObj, btnName) {
       operation,
     };
   } else if (
-    total
-    && next
-    && btnName === '%'
-    && (operation === '+' || operation === '-')
+    total &&
+    next &&
+    btnName === '%' &&
+    (operation === '+' || operation === '-')
   ) {
     const percentOfTotal = total * (next * 0.01);
     data = {
@@ -37,10 +37,10 @@ export default function calculate(dataObj, btnName) {
       operation: null,
     };
   } else if (
-    total
-    && next
-    && btnName === '%'
-    && (operation === 'X' || operation === '÷')
+    total &&
+    next &&
+    btnName === '%' &&
+    (operation === 'X' || operation === '÷')
   ) {
     const percent = next * 0.01;
     data = {
@@ -74,13 +74,18 @@ export default function calculate(dataObj, btnName) {
       next: null,
       operation: null,
     };
-  } else if (total && !next && !Number.isNaN(Number(btnName)) && !operation) {
+  } else if (
+    total !== 'NaN' &&
+    !next &&
+    !Number.isNaN(Number(btnName)) &&
+    !operation
+  ) {
     data = {
       total: total + btnName,
       next: null,
       operation: null,
     };
-  } else if (total && !next && operators.includes(btnName)) {
+  } else if (total !== 'NaN' && !next && operators.includes(btnName)) {
     data = {
       total,
       next,
@@ -99,18 +104,35 @@ export default function calculate(dataObj, btnName) {
       operation,
     };
   } else if (
-    total
-    && operation
-    && next
-    && (operators.includes(btnName) || btnName === '=')
+    total &&
+    operation &&
+    next &&
+    (operators.includes(btnName) || btnName === '=')
   ) {
+    const t = operate(total, next, operation);
+    let op;
+    if (t === 'NaN' || btnName === '=') {
+      op = null;
+    }
     data = {
-      total:
-        operate(total, next, operation) === 'NaN'
-          ? null
-          : operate(total, next, operation),
+      total: t,
       next: null,
-      operation: btnName === '=' ? null : btnName,
+      operation: op === null ? null : btnName,
+    };
+  } else if (total === 'NaN' && next === null && operation === null) {
+    let t;
+    if (
+      operators.includes(btnName) ||
+      btnName === '%' ||
+      btnName === '+/-' ||
+      btnName === '='
+    ) {
+      t = null;
+    }
+    data = {
+      total: t === null ? null : btnName,
+      next: null,
+      operation: null,
     };
   }
   return data;

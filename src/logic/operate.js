@@ -7,20 +7,20 @@ export default function operate(numOne, numTwo, operation) {
   const numTwoBig = new Big(parseFloat(numTwo));
   switch (operation) {
     case '+':
-      total = numOneBig.plus(numTwoBig).toPrecision(5).toString();
+      total = parseFloat(numOneBig.plus(numTwoBig).toFixed(10)).toString();
       break;
 
     case '-':
-      total = numOneBig.minus(numTwoBig).toPrecision(5).toString();
+      total = parseFloat(numOneBig.minus(numTwoBig).toFixed(10)).toString();
       break;
 
     case 'X':
-      total = numOneBig.times(numTwoBig).toPrecision(5).toString();
+      total = parseFloat(numOneBig.times(numTwoBig).toFixed(10)).toString();
       break;
 
     case '÷':
       try {
-        total = numOneBig.div(numTwoBig).toPrecision(5).toString();
+        total = parseFloat(numOneBig.div(numTwoBig).toFixed(10)).toString();
       } catch (error) {
         total = 'NaN';
       }

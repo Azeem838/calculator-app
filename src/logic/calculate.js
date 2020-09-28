@@ -25,10 +25,10 @@ export default function calculate(dataObj, btnName) {
       operation,
     };
   } else if (
-    total &&
-    next &&
-    btnName === '%' &&
-    (operation === '+' || operation === '-')
+    total
+    && next
+    && btnName === '%'
+    && (operation === '+' || operation === '-')
   ) {
     const percentOfTotal = total * (next * 0.01);
     data = {
@@ -37,10 +37,10 @@ export default function calculate(dataObj, btnName) {
       operation: null,
     };
   } else if (
-    total &&
-    next &&
-    btnName === '%' &&
-    (operation === 'X' || operation === '÷')
+    total
+    && next
+    && btnName === '%'
+    && (operation === 'X' || operation === '÷')
   ) {
     const percent = next * 0.01;
     data = {
@@ -75,10 +75,10 @@ export default function calculate(dataObj, btnName) {
       operation: null,
     };
   } else if (
-    total !== 'NaN' &&
-    !next &&
-    !Number.isNaN(Number(btnName)) &&
-    !operation
+    total !== 'NaN'
+    && !next
+    && !Number.isNaN(Number(btnName))
+    && !operation
   ) {
     data = {
       total: total + btnName,
@@ -104,10 +104,10 @@ export default function calculate(dataObj, btnName) {
       operation,
     };
   } else if (
-    total &&
-    operation &&
-    next &&
-    (operators.includes(btnName) || btnName === '=')
+    total
+    && operation
+    && next
+    && (operators.includes(btnName) || btnName === '=')
   ) {
     const t = operate(total, next, operation);
     let op;
@@ -122,10 +122,10 @@ export default function calculate(dataObj, btnName) {
   } else if (total === 'NaN' && next === null && operation === null) {
     let t;
     if (
-      operators.includes(btnName) ||
-      btnName === '%' ||
-      btnName === '+/-' ||
-      btnName === '='
+      operators.includes(btnName)
+      || btnName === '%'
+      || btnName === '+/-'
+      || btnName === '='
     ) {
       t = null;
     }
